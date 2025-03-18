@@ -1,11 +1,10 @@
 <?php
-$host = "localhost";
-$user = "root";
-$dbname = "clientedb";
+ $conexion = mysqli_connect (hostname:"localhost", username:"root", password:"", database:"clientedb");
 
-$conn = new mysqli($host, $user, $pass, $dbname);
+ if(mysqli_connect_error()){
+    echo "error: ". mysqli_connect_error();
+ }else{
+    echo "conexion realizada"
+ }
 
-if ($conn->connect_error) {
-    die("Error de conexión: " . $conn->connect_error);
-}
 ?>
